@@ -14,6 +14,7 @@ export class ContactListComponent extends MeepoHistory {
     data: any[] = [];
     page: number = 1;
     psize: number = 10;
+
     constructor(
         public store: StoreService,
         public cd: ChangeDetectorRef,

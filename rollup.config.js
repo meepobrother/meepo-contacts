@@ -270,7 +270,7 @@ switch (target) {
 
 export default {
     exports: 'named',
-    name: 'meepo-swiper',
+    name: 'meepo-contacts',
     plugins,
     external: Object.keys(globals),
     globals,
