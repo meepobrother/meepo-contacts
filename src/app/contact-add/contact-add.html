@@ -1,0 +1,16 @@
+<form-row>
+    <form-input [(model)]="widget.realname" tip="请输入姓名">
+        姓名
+    </form-input>
+    <form-input [(model)]="widget.mobile" type="number" tip="请输入电话">
+        电话
+    </form-input>
+</form-row>
+<form-row>
+    <form-input [(model)]="widget.desc" type="text" tip="请输入备注">
+        备注
+    </form-input>
+</form-row>
+<form-row>
+    <a href="javascript:;" (click)="save()" class="weui-btn weui-btn_primary">保存</a>
+</form-row>

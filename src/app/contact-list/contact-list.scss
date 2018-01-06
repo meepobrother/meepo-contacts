@@ -1,0 +1,62 @@
+contact-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .contact-list-main {
+        flex: 1;
+        position: relative;
+    }
+    .weui-btn {
+        width: 100%;
+    }
+    .contact-container {
+        background: #efefef;
+        li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: #fff;
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            &:hover {
+                opacity: .8;
+            }
+            ion {
+                font-size: 30px;
+                color: gray;
+            }
+            small {
+                color: gray;
+                margin-left: 10px;
+            }
+            .contact-item-main {
+                flex: 1;
+                margin: 0 15px;
+                overflow: hidden;
+            }
+            .title {
+                font-size: 1em;
+            }
+            p {
+                font-size: .9em;
+                color: gray;
+            }
+            .right {
+                min-width: 60px;
+                ion {
+                    font-size: 20px;
+                    margin-left: 10px;
+                    color: gray;
+                }
+            }
+        }
+    }
+}
+
+empty {
+    display: block;
+    position: relative;
+    background: #efefef;
+    padding: 0px;
+    overflow: hidden;
+}

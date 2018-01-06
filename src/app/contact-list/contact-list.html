@@ -1,0 +1,19 @@
+<div class="contact-list-main">
+    <minirefresh-default (up)="up($event)" (down)="down($event)">
+        <ul class="contact-container">
+            <li *ngFor="let item of data">
+                <ion name="ios-book"></ion>
+                <div class="contact-item-main">
+                    <h2 class="title">{{item.realname}}<small>{{item.desc}}</small></h2>
+                    <p>{{item.mobile}}</p>
+                </div>
+                <div class="right">
+                    <ion (click)="edit(item)" name="edit"></ion>
+                    <ion (click)="delete(item)" name="ios-trash"></ion>
+                </div>
+            </li>
+        </ul>
+        <empty *ngIf="data.length === 0"></empty>
+    </minirefresh-default>
+</div>
+<a class="weui-btn weui-btn_primary" (click)="add()">添加联系人</a>
