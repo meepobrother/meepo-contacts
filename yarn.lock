@@ -3118,7 +3118,7 @@ meepo-event@>=1.1.4, meepo-event@>=1.1.8:
     rxjs "^5.5.5"
     zone.js "0.8.4"
 
-meepo-footer@^1.1.9:
+meepo-footer@>=1.1.9:
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/meepo-footer/-/meepo-footer-1.1.9.tgz#910b0528e8d1530216d439a56062f0baac8d63f1"
   dependencies:
