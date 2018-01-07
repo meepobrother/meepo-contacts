@@ -29,7 +29,7 @@ export class ContactListComponent extends MeepoHistory {
         super(store, cd, title);
     }
 
-    meepoOnInit() {
+    meepoInit() {
         this.event.publish(FOOTER_HIDDEN, '');
     }
 
