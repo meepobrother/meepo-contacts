@@ -2,6 +2,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UuidService } from 'meepo-uuid';
 import { StoreService } from 'meepo-store';
+import { EventService } from 'meepo-event';
+import { FOOTER_SHOWN, FOOTER_HIDDEN } from 'meepo-footer';
 
 @Component({
     selector: 'contact-add',
@@ -21,7 +23,8 @@ export class ContactAddComponent implements OnInit {
         public route: ActivatedRoute,
         public uuid: UuidService,
         public store: StoreService,
-        public router: Router
+        public router: Router,
+        public event: EventService
     ) {
         this.route.queryParams.subscribe((res: any) => {
             this.key = res.key;
@@ -37,7 +40,9 @@ export class ContactAddComponent implements OnInit {
         });
     }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.event.publish(FOOTER_HIDDEN, '');
+    }
 
     save() {
         let items: any[] = this.store.get(this.key, []);

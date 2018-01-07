@@ -1,6 +1,10 @@
 import { Component, OnInit, ViewEncapsulation, ChangeDetectorRef } from '@angular/core';
 import { MeepoHistory } from 'meepo-base';
 import { StoreService } from 'meepo-store';
+import { EventService } from 'meepo-event';
+
+import { FOOTER_HIDDEN, FOOTER_SHOWN } from 'meepo-footer';
+
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 @Component({
@@ -19,9 +23,14 @@ export class ContactListComponent extends MeepoHistory {
         public store: StoreService,
         public cd: ChangeDetectorRef,
         public title: Title,
-        public router: Router
+        public router: Router,
+        public event: EventService
     ) {
         super(store, cd, title);
+    }
+
+    meepoOnInit() {
+        this.event.publish(FOOTER_HIDDEN, '');
     }
 
     add() {

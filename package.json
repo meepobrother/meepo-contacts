@@ -1,6 +1,6 @@
 {
     "name": "meepo-contacts",
-    "version": "1.1.4",
+    "version": "1.1.6",
     "description": "contacts for angular",
     "main": "./bundles/meepo.umd.js",
     "module": "./esm5/meepo.js",
@@ -54,6 +54,7 @@
         "meepo-autosize": ">=1.3.2",
         "meepo-base": ">=1.3.0",
         "meepo-empty": ">=1.1.1",
+        "meepo-footer": "^1.1.9",
         "meepo-forms": ">=1.7.3",
         "meepo-icons": ">=1.0.7",
         "meepo-minirefresh": ">=1.3.2",
